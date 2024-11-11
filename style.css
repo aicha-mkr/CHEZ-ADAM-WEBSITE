@@ -1,11 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
 
-:root{
-    --main-color:#284990;
+:root {
+    --main-color: #b4ecd0;
     --black-color: #252525;
     --border: 0.1rem solid rgba(255, 255, 255, 0.4);
 }
 
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s ease;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--main-color);
+    color: #000; /* Couleur du texte par défaut en noir */
+}
+
+a {
+    text-decoration: none;
+    color: var(--black-color); /* Couleur des liens */
+}
+
+h1, h3, p {
+    color: #000; /* S'assurer que les titres et les paragraphes sont en noir */
+}
+
+.header a, .footer a, .about .content {
+    color: var(--black-color); /* Couleur des liens dans la header et footer */
+}
+:root{
+    --main-color:#0B4619 ;
+    --black-color: #252525;
+    --border: 0.1rem solid rgba(55, 44, 44, 0.4);
+}
+.row {
+    display: flex; /* Utilise Flexbox pour aligner les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne si nécessaire */
+    gap: 2rem; /* Espace entre les éléments */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    padding: 2rem; /* Ajoute un peu d'espace autour */
+}
+
+.image {
+    flex: 1 1 40%; /* Prend 40% de l'espace disponible */
+}
+
+.image img {
+    width: 100%; /* L'image remplira 100% de son conteneur */
+    height: auto; /* Garder la proportion de l'image */
+    border-radius: 1rem; /* Arrondir légèrement les coins de l'image */
+}
+
+.content {
+    flex: 1 1 50%; /* Prend 50% de l'espace disponible */
+}
+
+.content h3 {
+    font-size: 2.5rem; /* Taille du titre */
+    color: var(--black-color); /* Couleur du titre */
+    margin-bottom: 1rem; /* Espacement en bas du titre */
+}
+
+.paragraph {
+    list-style-type: disc; /* Utilise des puces pour les éléments de liste */
+    padding-left: 20px; /* Ajoute un espace à gauche pour la liste */
+}
+
+.paragraph li {
+    font-size: 1.6rem; /* Taille des éléments de la liste */
+    color: #ffffff; /* Couleur du texte */
+    line-height: 1.8; /* Hauteur de ligne pour améliorer la lisibilité */
+    margin-bottom: 1rem; /* Espacement entre les éléments de la liste */
+}
 *{
     font-family: 'Poppins',sans-serif;
     margin: 0;
@@ -17,7 +97,109 @@
     transition: .2s ease;
     outline: none;
 }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
 
+th, td {
+    padding: 1rem; /* Réduire le padding */
+    text-align: left;
+    border: 1px solid #000000;
+    font-size: 3.5rem; /* Ajuster la taille de la police */
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+img {
+    width: 50px; /* Limiter la largeur des images */
+    height: auto; /* Garder la proportion de l'image */
+}
+
+table img {
+    width: 150px; /* Ajustez cette valeur pour réduire la taille des images */
+    height: auto; /* Maintenir la proportion de l'image */
+}
+/* Styles pour les titres de section */
+.subheading {
+    font-size: 3rem; /* Augmenter la taille de la police */
+    color: var(--black-color); /* Couleur du titre */
+    margin: 2rem 0 1rem; /* Espacement autour du titre */
+    text-align: center; /* Centre le texte */
+    position: relative; /* Pour ajouter un effet de soulignement */
+}
+
+.subheading span {
+    color: var(--main-color); /* Couleur différente pour le span */
+    font-weight: bold; /* Met le texte en gras */
+}
+/* Title and Subheading Styles */
+.subheading {
+    color: #ffffff; /* White color for better readability against green */
+    margin: 2rem 0 1rem; /* Spacing around the title */
+    text-align: center; /* Center the text */
+    position: relative; /* For underline effect */
+    font-family: 'Arial Rounded MT Bold', sans-serif; /* Rounded font for a modern look */
+    font-size: 3rem; /* Increased font size for visibility */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+.subheading span {
+    color: var(--main-color); /* Different color for the span */
+    font-weight: bold; /* Bold text */
+}
+
+/* Styles for Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Light background for the table */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Optional: shadow for depth */
+}
+
+th, td {
+    padding: 1.5rem; /* Increased padding for better spacing */
+    text-align: center; /* Center text in cells */
+    border: 1px solid #000000; /* Cell border */
+    font-size: 2rem; /* Font size for better readability */
+}
+
+th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    font-weight: bold;
+    color: #333; /* Darker color for header text */
+    border-bottom: 2px solid var(--main-color); /* Bottom border for a modern touch */
+}
+
+/* Styles for Images in Tables */
+td img {
+    display: block; /* Center image as a block */
+    margin: 0 auto; /* Center image horizontally */
+    width: 90px; /* Size of the image on mobile */
+    height: auto; /* Maintain image proportion */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .subheading {
+        font-size: 2.5rem; /* Reduce title size on mobile */
+    }
+
+    th, td {
+        font-size: 1.5rem; /* Reduce font size for tables on mobile */
+        padding: 1rem; /* Adjust padding for better spacing */
+    }
+
+    table img {
+        width: 70px; /* Reduce image size on mobile */
+    }
+}
 html{
     font-size: 62.5%;
     overflow-x: hidden;
@@ -102,7 +284,7 @@ a{
 ::-webkit-scrollbar{
     height: 0.5rem;
     width: 1rem;
-    background-color: rgb(7, 126, 182);
+    background-color: rgb(23, 44, 29);
 }
 
 ::-webkit-scrollbar-track{
@@ -111,7 +293,7 @@ a{
 
 ::-webkit-scrollbar-thumb{
     border-radius: 3rem;
-    background-color: greenyellow;
+    background-color: rgb(146, 181, 94);
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -163,7 +345,7 @@ a{
 }
 
 .header .logo img{
-    height: 9rem;
+    height: 13rem;
 }
 
 .header .navbar a{
@@ -250,7 +432,7 @@ a{
 
 .home{
     min-height: 100vh;
-    background: url(./image/pizza-with-turkey-bacon-orange-and-cashew-nuts-2022-03-29-07-33-54-utc.jpg) no-repeat;
+    background: url(./image/2.jpg) no-repeat;
     background-size: cover;
     background-position: center;
     margin-top: -134px;
@@ -280,24 +462,38 @@ a{
 /* ------------------------------------------MENU SECTION */
 /* img .box-container ve .box  genel olarak düzenlendi */
 
-.menu .box-container .menu-category{
-    font-size: 1.2rem;
-    text-transform: uppercase;
+.menu .box-container .menu-category {
+    font-size: 1.2rem; /* Category font size */
+    text-transform: uppercase; /* Uppercase for category */
 }
 
-.menu .box-container .box h3{
-    font-size: 3rem;
-    padding: 1rem 0;
+.menu .box-container .box h3 {
+    font-size: 3rem; /* Title font size */
+    padding: 1rem 0; /* Padding around the title */
+    color: #333; /* Dark color for better contrast */
+    text-align: center; /* Center align the title */
 }
 
-.menu .box-container .box .price{
-    font-size: 2.5rem;
-    padding: 0.5rem 0;
+.menu .box-container .box .price {
+    font-size: 2.5rem; /* Price font size */
+    padding: 0.5rem 0; /* Padding around the price */
+    color: #e74c3c; /* Color for the price */
 }
 
-.menu .box-container .box .price span{
-    text-decoration: line-through;
-    font-size: 1.5rem;
+.menu .box-container .box .price span {
+    text-decoration: line-through; /* Strikethrough for old price */
+    font-size: 1.5rem; /* Font size for old price */
+    color: #999; /* Lighter color for old price */
+}
+
+/* Additional styles for hover effects */
+.menu .box {
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.menu .box:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
 }
 /* ------------------------------------------MENU SECTION */
 
@@ -354,38 +550,39 @@ a{
 }
 
 /* ------------------------------------------PRODUCTS SECTION */
-
-/* ------------------------------------------ABOUT US SECTION */
-.about .row .image{
-     flex: 1 1 45rem;
-}
-.about .row .image img{
-    height: 50rem;
-    object-fit: contain;
-}
-/* img  genel olarak düzenlendi */
-
-.about .row{
+.about .row {
     display: flex;
     flex-wrap: wrap;
     column-gap: 2rem;
-}
-
-.about .row .content{
+  }
+  
+  .about .row .image {
     flex: 1 1 45rem;
-}
-
-.about .row .content h3{
+  }
+  
+  .about .row .image img {
+    height: 50rem;
+    object-fit: contain;
+  }
+  
+  .about .row .content {
+    flex: 1 1 45rem;
+    color: white;
+  }
+  
+  .about .row .content h3 {
     font-size: 3rem;
-    color: #fff;
-}
-
-.about .row .content p{
+    color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .about .row .content p {
     font-size: 1.6rem;
-    color: #ccc;
+    color: white;
     padding: 1rem 0;
     line-height: 1.8;
-}
+    font-family: 'Lato', sans-serif;
+  }
 /* ------------------------------------------ABOUT US SECTION */
 /* ------------------------------------------REVIEW SECTION */
 /* img .box-container ve .box  genel olarak düzenlendi */
@@ -471,6 +668,31 @@ a{
 }
 /* ------------------------------------------CONTACT SECTION */
 
+.products {
+    padding: 2rem;
+}
+
+.products table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.products th, .products td {
+    padding: 1rem;
+    text-align: left;
+    border: 1px solid #000;
+}
+
+.products th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.products img {
+    width: 100px; /* Ajustez la taille de l'image si nécessaire */
+    height: auto;
+}
 /* ------------------------------------------BLOG SECTION */
 .blog .box-container .box-full{
     background-color: #fff;
@@ -633,6 +855,9 @@ a{
     html{
         font-size: 50%;
     }
+
+
+    
 }
 
 
